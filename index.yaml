@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  kubernetes-dashboard:
+  - apiVersion: v2
+    appVersion: v2.0.0-rc3
+    created: "2020-03-18T22:21:14.087300014+01:00"
+    description: A Helm chart for deploying the kubernetes dashboard in the recommended
+      way
+    digest: a8be78f6083a7a8f6fbf564eea2a3ddfb1d7274ca37d3f9782fabe2833c37bd6
+    name: kubernetes-dashboard
+    urls:
+    - https://github.com/St0rmingBr4in/st0rmingbr4in-charts/releases/download/kubernetes-dashboard-0.1.0/kubernetes-dashboard-0.1.0.tgz
+    version: 0.1.0
+generated: "2020-03-18T22:21:13.798440277+01:00"
