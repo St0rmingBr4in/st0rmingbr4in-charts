@@ -1,0 +1,10 @@
+---
+apiVersion: v2
+name: kubernetes-dashboard
+description: A Helm chart for deploying the kubernetes dashboard in the
+  recommended way
+
+type: application
+
+version: 0.1.0
+appVersion: v2.0.0-rc3

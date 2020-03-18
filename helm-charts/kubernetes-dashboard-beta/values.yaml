@@ -1,0 +1,43 @@
+---
+# Default values for kubernetes-dashboard.
+
+replicaCount: 1
+
+image:
+  repository: "kubernetesui/dashboard"
+  pullPolicy: Always
+
+enableInsecureLogin: false
+
+imagePullSecrets: []
+nameOverride: ""
+fullnameOverride: ""
+
+serviceAccount:
+  create: true
+  name: kubernetes-dashboard
+
+podSecurityContext: {}
+
+securityContext: {}
+
+rbac:
+  clusterAdminRole: false
+
+service:
+  type: ClusterIP
+  port: 443
+
+ingress:
+  enabled: false
+  hosts:
+    - host: localhost
+      paths: ['/', '/*']
+
+resources: {}
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
