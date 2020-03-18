@@ -8,8 +8,8 @@ metadata:
     "helm.sh/hook": test-success
 spec:
   containers:
-    - name: wget
-      image: busybox
-      command: ['wget']
-      args:  ['{{ include "kubernetes-dashboard.fullname" . }}:{{ .Values.service.port }}']
+    - name: curl
+      image: radial/busyboxplus:curl
+      command: ['curl']
+      args:  ['--insecure', 'http{{ if not .Values.enableInsecureLogin }}s{{ end }}://{{ include "kubernetes-dashboard.fullname" . }}:{{ .Values.service.port }}']
   restartPolicy: Never
