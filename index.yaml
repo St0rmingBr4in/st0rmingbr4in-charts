@@ -3,6 +3,20 @@ entries:
   kubernetes-dashboard:
   - apiVersion: v2
     appVersion: v2.0.0-rc3
+    created: "2020-03-20T18:40:39.663105196Z"
+    description: A Helm chart for deploying the kubernetes dashboard in the recommended
+      way
+    digest: d2189285d25211fa31efabcb9b95fd2dfa312865583a7ab030c92c8f74ebf405
+    home: https://st0rmingbr4in.github.io/st0rmingbr4in-charts/
+    maintainers:
+    - email: julien.doche@gmail.com
+      name: St0rmingBr4in
+    name: kubernetes-dashboard
+    urls:
+    - https://github.com/St0rmingBr4in/st0rmingbr4in-charts/releases/download/kubernetes-dashboard-0.2.0/kubernetes-dashboard-0.2.0.tgz
+    version: 0.2.0
+  - apiVersion: v2
+    appVersion: v2.0.0-rc3
     created: "2020-03-18T22:21:14.087300014+01:00"
     description: A Helm chart for deploying the kubernetes dashboard in the recommended
       way
