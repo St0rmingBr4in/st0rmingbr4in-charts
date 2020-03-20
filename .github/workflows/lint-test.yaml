@@ -1,3 +1,4 @@
+---
 name: Lint and Test Charts
 
 on: pull_request
@@ -9,11 +10,20 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v1
 
+      - name: Install Helm
+        run: |
+          curl -sSLo get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get
+          chmod 700 get_helm.sh
+          ./get_helm.sh --version v3.1.2
+
       - name: Run chart-testing (lint)
         id: lint
-        uses: helm/chart-testing-action@v1.0.0-alpha.3
+        uses: HexF/chart-testing-action@v3.0.1
+        env:
+          CT_CHART_REPOS: "stable=https://kubernetes-charts.storage.googleapis.com"
         with:
           command: lint
+          image: quay.io/helmpack/chart-testing:v3.0.0-beta.2
 
       - name: Create kind cluster
         uses: helm/kind-action@v1.0.0-alpha.3
@@ -22,6 +32,8 @@ jobs:
         if: steps.lint.outputs.changed == 'true'
 
       - name: Run chart-testing (install)
-        uses: helm/chart-testing-action@v1.0.0-alpha.3
+        uses: HexF/chart-testing-action@v3.0.1
+        env:
+          CT_CHART_REPOS: "stable=https://kubernetes-charts.storage.googleapis.com"
         with:
           command: install

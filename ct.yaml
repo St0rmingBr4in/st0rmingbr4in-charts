@@ -1,0 +1,4 @@
+---
+chart-repos:
+chart-dirs:
+  - helm-charts

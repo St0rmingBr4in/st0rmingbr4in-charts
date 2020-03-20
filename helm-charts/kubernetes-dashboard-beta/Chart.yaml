@@ -3,8 +3,12 @@ apiVersion: v2
 name: kubernetes-dashboard
 description: A Helm chart for deploying the kubernetes dashboard in the
   recommended way
+home: https://st0rmingbr4in.github.io/st0rmingbr4in-charts/
 
 type: application
 
-version: 0.1.0
+version: 0.2.0
 appVersion: v2.0.0-rc3
+maintainers:
+  - name: St0rmingBr4in
+    email: julien.doche@gmail.com
