@@ -25,7 +25,7 @@ jobs:
           ./get_helm.sh --version v3.1.2
 
       - name: Run chart-releaser
-        uses: helm/chart-releaser-action@v1.0.0-alpha.2
+        uses: desimone/chart-releaser-action@115d096a57ef5c9629ec69cd14d2a348e93c32c8
         with:
           charts_repo_url: https://st0rmingbr4in.github.io/st0rmingbr4in-charts/
           charts_dir: helm-charts
